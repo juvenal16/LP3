@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% block conteudo %}
+        <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    {% for coluna in colunas %}
+                    <th>{{ coluna }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for ativo in ativos %}
+                <tr>
+                    <td>{{ ativo.nome }}</td>
+                    <td>{{ ativo.tipo }}</td>
+                    <td>{{ ativo.setor }}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+{% endblock %}
